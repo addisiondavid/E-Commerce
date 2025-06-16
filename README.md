@@ -1,51 +1,53 @@
-# 🛒 Spring Cloud Gateway for Microservices Routing and Authentication  
+# 🛒 High-Concurrency E-Commerce Website with Microservices Architecture  
 **Author:** Chin Wah David Lam  
-**Project:** Hmall Microservices Architecture  
 
 ---
 
 ## 📌 Overview  
-This project introduces a **Spring Cloud Gateway** to serve as a unified entry point for a microservices-based e-commerce platform.  
+This project implements a full-stack **E-Commerce website** designed to handle heavy traffic during peak shopping seasons.  
+Built on a **Spring Cloud microservices architecture**, it ensures scalability, reliability, and fast response times.  
 
-It addresses common problems when using multiple independent microservices:
-- Too many entry points for the frontend (multiple ports and addresses to manage)
-- Difficulty managing authentication and user information consistently
-- Need for consistent configuration across services  
-
----
-
-### Key Features  
-- **Scalable microservices architecture** refactored from a monolithic system for better modularity and maintainability.  
-- **Spring Cloud Gateway** for unified API routing and entry point management.  
-- **Nacos** for dynamic service discovery and centralized configuration management.  
-- **RabbitMQ** for asynchronous, high-concurrency message processing.  
-- Proven stability and responsiveness under load through **JMeter performance testing** with **2,000 concurrent simulated users**.  
+The platform features:
+- A unified API entry point through **Spring Cloud Gateway**
+- Dynamic service discovery and centralized config via **Nacos**
+- Asynchronous message processing using **RabbitMQ**
+- Proven stability with **2,000 concurrent users** tested via **JMeter**
 
 ---
 
-## 🌐 Microservices Architecture  
-The system includes the following microservices:
-- **User Service**
-- **Item Service**
-- **Cart Service**
-- **Trade Service**
-- **Payment Service**
-
-All of these services are accessed through the **Spring Cloud Gateway**.
+## ⚙ Features  
+✅ Multi-threaded architecture supporting large-scale concurrent user traffic  
+✅ Refactored monolithic system into modular, scalable microservices  
+✅ **Spring Cloud Gateway** for API routing and unified entry point  
+✅ **Nacos** for service discovery and centralized configuration  
+✅ **RabbitMQ** for asynchronous order + transaction processing  
+✅ Performance-tested using **JMeter** to simulate 2,000+ concurrent users  
+✅ Responsive and reliable E-Commerce user experience  
 
 ---
 
 ## 📂 Tech stack  
-- Spring Cloud Gateway  
 - Spring Boot  
-- Spring Cloud Alibaba Nacos (service discovery + config)  
-- Spring Cloud LoadBalancer  
+- Spring Cloud Gateway  
+- Nacos (service discovery + config management)  
+- RabbitMQ  
+- JMeter (performance testing)  
+- Docker (optional for deployment)  
 
 ---
 
-## 🗄 Gateway route configuration example  
+## 🌐 Microservices  
+- **User Service**
+- **Item Service**
+- **Cart Service**
+- **Order (Trade) Service**
+- **Payment Service**
+- **API Gateway (hm-gateway)**
 
-### `application.yaml`
+---
+
+## 🗄 Example Gateway Route Configuration  
+
 ```yaml
 server:
   port: 8080
